@@ -1,14 +1,6 @@
-FROM ubuntu:latest
-MAINTAINER Amol Manderkar <amolsup2311@gmail.com>
+FROM tomcat
 
-RUN apt-get update
-RUN apt-get install -y nodejs
-RUN apt-get install -y npm
-RUN ln -s /usr/bin/nodejs /usr/bin/node
+MAINTAINER "tanvi"
 
-RUN npm install -g http-server
+ADD sample.war /usr/local/tomcat/webapps/
 
-ADD index.html /usr/apps/http/sample.war
-WORKDIR /usr/apps/http/
-
-CMD ["http-server", "-s"]
