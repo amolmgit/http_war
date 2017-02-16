@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER Hemanshu Bhojak <hemanshubhojak@example.com>
+MAINTAINER Amol Manderkar <amolsup2311@gmail.com>
 
 RUN apt-get update
 RUN apt-get install -y nodejs
